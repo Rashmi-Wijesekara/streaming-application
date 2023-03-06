@@ -10,6 +10,7 @@ const GoogleAuth = (props) => {
 		email: "",
 		name: "",
 		pictureUrl: "",
+		id: ""
 	});
 
 	useEffect(() => {
@@ -35,12 +36,13 @@ const GoogleAuth = (props) => {
 			);
 
 			console.log(data);
+			props.signIn(data.sub);
 
-			props.signIn();
 			setUser({
 				email: data.email,
 				name: data.name,
 				pictureUrl: data.picture,
+				id: data.sub
 			});
 		},
 	});
