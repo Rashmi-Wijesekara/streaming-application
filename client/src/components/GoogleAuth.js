@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
-import jwt_decode from "jwt-decode";
 import axios from "axios";
 
 const GoogleAuth = () => {
@@ -44,13 +43,22 @@ const GoogleAuth = () => {
 		},
 	});
 
+	const logout = () => {
+		setIsSignedIn(false);
+		setUser({
+			email: "",
+			name: "",
+			pictureUrl: "",
+		});
+	}
+
 	const renderAuthButton = () => {
 		if (isSignedIn === null) {
 			return null;
 		} else if (isSignedIn) {
 			return (
 				<button
-					onClick={() => setIsSignedIn(false)}
+					onClick={()=> logout()}
 					className="ui red google button"
 				>
 					<i className="google icon" />
