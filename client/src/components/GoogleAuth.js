@@ -17,13 +17,13 @@ const GoogleAuth = (props) => {
 		if (props.isSignedIn === null) props.signOut();
 	}, [props]);
 
-	useEffect(() => {
-		console.log(user);
-	}, [user]);
+	// useEffect(() => {
+	// 	console.log(user);
+	// }, [user]);
 
 	const login = useGoogleLogin({
 		onSuccess: async (tokenResponse) => {
-			console.log(tokenResponse);
+			// console.log(tokenResponse);
 
 			const { data } = await axios.get(
 				"https://www.googleapis.com/oauth2/v3/userinfo",
@@ -35,7 +35,7 @@ const GoogleAuth = (props) => {
 				}
 			);
 
-			console.log(data);
+			// console.log(data);
 			props.signIn(data.sub);
 
 			setUser({
@@ -86,7 +86,7 @@ const GoogleAuth = (props) => {
 };
 
 const mapStateToProps = (state) => {
-	console.log(state);
+	// console.log(state);
 
 	return {
 		isSignedIn: state.auth.isSignedIn,
