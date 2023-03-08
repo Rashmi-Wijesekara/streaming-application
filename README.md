@@ -37,5 +37,7 @@ npm install
 Technologies used in the project:
 
 *   React JS
+*   Redux
 *   Semantic UI
 *   React OAuth2 | Google
+*   Redux form
