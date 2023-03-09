@@ -7,6 +7,7 @@ import {
 	applyMiddleware,
 	compose,
 } from "redux";
+import thunk from "redux-thunk";
 
 import App from "./App";
 import reducers from "./reducers";
@@ -16,7 +17,7 @@ const composeEnhancers =
 
 const store = createStore(
 	reducers,
-	composeEnhancers(applyMiddleware())
+	composeEnhancers(applyMiddleware(thunk))
 );
 
 const root = ReactDOM.createRoot(
