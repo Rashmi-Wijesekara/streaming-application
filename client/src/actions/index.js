@@ -36,6 +36,7 @@ export const createStream =
 
 export const fetchStreams = () => async dispatch => {
 	const response = await streams.get('/streams')
+	console.log("fetched streams list from the API")
 	dispatch({
 		type: FETCH_STREAMS,
 		payload: response.data
