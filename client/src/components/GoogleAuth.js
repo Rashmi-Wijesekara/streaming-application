@@ -1,30 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { connect } from "react-redux";
 import { signIn, signOut } from "../actions";
+import SessionHandler from '../SessionHandler'
 
 const GoogleAuth = (props) => {
-	
-	const [user, setUser] = useState({
-		email: "",
-		name: "",
-		pictureUrl: "",
-		id: ""
-	});
-
-	useEffect(() => {
-		if (props.isSignedIn === null) props.signOut();
-	}, [props]);
-
-	// useEffect(() => {
-	// 	console.log(user);
-	// }, [user]);
-
 	const login = useGoogleLogin({
 		onSuccess: async (tokenResponse) => {
-			// console.log(tokenResponse);
-
 			const { data } = await axios.get(
 				"https://www.googleapis.com/oauth2/v3/userinfo",
 				{
@@ -34,26 +17,32 @@ const GoogleAuth = (props) => {
 					},
 				}
 			);
-
-			// console.log(data);
-			props.signIn(data.sub);
-
-			setUser({
+			
+			const currentUser = {
 				email: data.email,
 				name: data.name,
 				pictureUrl: data.picture,
-				id: data.sub
-			});
+				id: data.sub,
+			};
+			
+			props.signIn(data.sub, currentUser);
 		},
 	});
 
+	useEffect(() => {
+		const sessionHandler = new SessionHandler()
+		const userStatus = sessionHandler.isAuthenticated();
+		if (props.isSignedIn === null && userStatus) {
+			const currentUser = sessionHandler.getCurrentUser();
+			props.signIn(currentUser.id, currentUser)
+		}
+		else if(props.isSignedIn === null && !userStatus){
+			props.signOut();
+		}
+	}, [login, props]);
+
 	const logout = () => {
 		props.signOut();
-		setUser({
-			email: "",
-			name: "",
-			pictureUrl: "",
-		});
 	};
 
 	const renderAuthButton = () => {
@@ -86,8 +75,6 @@ const GoogleAuth = (props) => {
 };
 
 const mapStateToProps = (state) => {
-	// console.log(state);
-
 	return {
 		isSignedIn: state.auth.isSignedIn,
 	};
