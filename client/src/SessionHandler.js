@@ -21,6 +21,13 @@ export default class SessionHandler {
 		return user ? true : false;
 	}
 
+	getCurrentUser() {
+		const userString =
+			sessionStorage.getItem("currentUser");
+		const user = JSON.parse(userString);
+		return user
+	}
+
 	isAuthenticated() {
 		return this.authenticated;
 	}

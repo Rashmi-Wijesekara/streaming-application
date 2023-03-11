@@ -8,7 +8,8 @@ import {
 	DELETE_STREAM,
 } from "./types";
 import streams from "../api/streams";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import history from '../history'
 import SessionHandler from "../SessionHandler";
 
 export const signIn = (userId, currentUser) => {
@@ -25,7 +26,7 @@ export const signIn = (userId, currentUser) => {
 
 export const signOut = () => {
 	const sessionHandler = new SessionHandler();
-	
+
 	sessionHandler.deleteCurrentUser();
 	return {
 		type: SIGN_OUT,
@@ -45,7 +46,8 @@ export const createStream =
 			payload: response.data,
 		});
 
-		useNavigate("/");
+		// useNavigate("/");
+		history.push('/')
 	};
 
 export const fetchStreams = () => async (dispatch) => {
