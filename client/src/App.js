@@ -1,5 +1,6 @@
 import {
-	BrowserRouter as Router,
+	// BrowserRouter as Router,
+	unstable_HistoryRouter as Router,
 	Routes,
 	Route,
 	// Link,
