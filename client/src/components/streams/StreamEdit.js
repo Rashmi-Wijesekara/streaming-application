@@ -1,9 +1,22 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import { useSelector } from "react-redux";
+import {useParams} from 'react-router-dom'
 
-const StreamEdit = () => {
+const StreamEdit = (props) => {
+	const {id} = useParams()
+
+	const stream = useSelector(state => {
+		return state.streams[id];
+	})
+
 	return (
-		<div>StreamEdit</div>
+		<div className="ui container segment">
+			{stream.title}
+			<div></div>
+			{stream.description}
+		</div>
 	)
 }
 
-export default StreamEdit
+export default connect(null, {})(StreamEdit)

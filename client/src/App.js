@@ -1,9 +1,7 @@
 import {
-	// BrowserRouter as Router,
 	unstable_HistoryRouter as Router,
 	Routes,
-	Route,
-	// Link,
+	Route
 } from "react-router-dom";
 
 import Header from './components/Header'
@@ -27,7 +25,7 @@ const App = () => {
 						element={<StreamCreate />}
 					/>
 					<Route
-						path="/streams/edit"
+						path="/streams/edit/:id"
 						exact
 						element={<StreamEdit />}
 					/>
