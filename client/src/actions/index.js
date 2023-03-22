@@ -89,4 +89,6 @@ export const deleteStream =
 			type: DELETE_STREAM,
 			payload: streamId,
 		});
+
+		history.replace("/");
 	};
