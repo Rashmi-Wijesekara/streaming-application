@@ -2,12 +2,16 @@
 
 <p align="center"><img src="https://socialify.git.ci/Rashmi-Wijesekara/streaming-application/image?forks=1&amp;language=1&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2FRashmi-Wijesekara%2Fstreaming-application%2Fmain%2Fclient%2Fsrc%2Fassets%2Fstreamers-logo.png&amp;name=1&amp;owner=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
-<p id="description">A React JS application to make live streamings.</p>
-
+- This is a simple React Redux application to practice CRUD operations in React and using Redux as the state management library. 
+- The [Modern React with Redux](https://www.udemy.com/course/react-redux/) course by [Stephen Grider](https://github.com/StephenGrider) was followed to develop this application.
+- You can make live streams in this application by using OBS Studio software.
+- The installation steps are mentioned below.
 <br>
 
 <p align="center"><img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=%2361DAFB" alt="shields"><img src="https://img.shields.io/badge/semantic%20ui-35BDB2?style=for-the-badge&amp;logo=semanticuireact&amp;logoColor=white" alt="shields"></p>
 
+![](https://github.com/Rashmi-Wijesekara/streaming-application/blob/main/images/1.png)
+<p align="center">Screenshot of the application</p>
 <!-- <h2>🚀 Demo</h2>
 
 [demo-url](demo-url) -->
@@ -29,7 +33,7 @@ Here're some of the project's best features:
 <br>
 <h2>How does the streaming work?</h2>
 
-[image link here]()
+![](https://github.com/Rashmi-Wijesekara/streaming-application/blob/main/images/streaming.png)
 
 <br>
 <h2>🛠️ Installation Steps:</h2>
