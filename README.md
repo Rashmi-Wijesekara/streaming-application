@@ -17,8 +17,10 @@
 
 <p align="center"><img src="http://ForTheBadge.com/images/badges/built-with-love.svg"></p>
 
+![](https://github.com/Rashmi-Wijesekara/streaming-application/blob/main/images/2.png)
+
 ![](https://github.com/Rashmi-Wijesekara/streaming-application/blob/main/images/1.png)
-<p align="center">Screenshot of the application</p>
+<p align="center">Screenshots of the application</p>
 
 <!-- <h2>🚀 Demo</h2>
 
