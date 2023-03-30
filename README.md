@@ -18,17 +18,51 @@
 
 Here're some of the project's best features:
 
-*   Login using Google Identity API
+*	Login using Google Identity API
+*	Handling CRUD Operations
+	- Create a stream
+	- Show a stream
+	- Edit stream's details
+	- Delete a stream
+*	Watching live streams which are streaming from the OBS Studio software
 
 <br>
+<h2>How does the streaming work?</h2>
 
+[image link here]()
+
+<br>
 <h2>🛠️ Installation Steps:</h2>
 
-<p>1. Inside the /client directory</p>
+1. Run the following command inside the /client, /api, and /rtmp-server directories</p>
 
 ```
 npm install
 ```
+
+2. Then run the following command inside all the given 3 directories to start the API server, client, and rtmp-server.
+```
+npm start
+```
+
+3. Install the OBS Studio software
+[https://obsproject.com/download](https://obsproject.com/download)
+
+4. Go to the localhost:3000 URL where the React app is running and login to the application by using a google account. Then create a stream by entering relavent details.
+
+5. After creating a stream, the page will be redirected to the streaming list. In there, click on the stream that you just created.
+
+6. Then you will be redirected to a URL like this, `http://localhost:3000/streams/2` where `2` is the stream ID that you just created.
+
+7. In OBS, go to Settings -> Stream,
+```
+Stream Type: Custom Streaming Server
+URL: rtmp://localhost/live
+Streaming key: Stream ID
+```
+The stream ID would be the ID of the stream that you just created. In my case, it's `2`.
+
+8.After changing the settings, Click on `Start Streaming` in OBS and you will see the live stream of yours in the web application as well.
 
 <br> 
   
@@ -41,3 +75,5 @@ Technologies used in the project:
 *   Semantic UI
 *   React OAuth2 | Google
 *   Redux form
+* RTMP Node Media server
+*	flv.js
