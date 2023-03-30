@@ -8,7 +8,14 @@
 - The installation steps are mentioned below.
 <br>
 
-<p align="center"><img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=%2361DAFB" alt="shields"><img src="https://img.shields.io/badge/semantic%20ui-35BDB2?style=for-the-badge&amp;logo=semanticuireact&amp;logoColor=white" alt="shields"></p>
+<p align="center">
+<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=%2361DAFB" alt="shields">
+<img src="https://img.shields.io/badge/semantic%20ui-35BDB2?style=for-the-badge&amp;logo=semanticuireact&amp;logoColor=white" alt="shields">
+<img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white">
+<img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white">
+</p>
+
+<p align="center"><img src="http://ForTheBadge.com/images/badges/built-with-love.svg"></p>
 
 ![](https://github.com/Rashmi-Wijesekara/streaming-application/blob/main/images/1.png)
 <p align="center">Screenshot of the application</p>
@@ -76,9 +83,10 @@ The stream ID would be the ID of the stream that you just created. In my case, i
 Technologies used in the project:
 
 *   React JS
+* React Router
 *   Redux
 *   Semantic UI
 *   React OAuth2 | Google
 *   Redux form
 * RTMP Node Media server
-*	flv.js
+* flv.js
