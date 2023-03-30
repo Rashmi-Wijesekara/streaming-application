@@ -12,6 +12,7 @@
 
 ![](https://github.com/Rashmi-Wijesekara/streaming-application/blob/main/images/1.png)
 <p align="center">Screenshot of the application</p>
+
 <!-- <h2>🚀 Demo</h2>
 
 [demo-url](demo-url) -->
